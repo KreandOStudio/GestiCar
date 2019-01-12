@@ -9,4 +9,4 @@ class Vehicle(object):
         self.modelo = modelo_val
 
     def get_full_vehicle(self):
-        return "Marca: {} || Modelo: {}".format(self.marca, self.modelo)
+        return "Marca: {}; Modelo: {};".format(self.marca, self.modelo)

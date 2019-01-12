@@ -11,4 +11,4 @@ class Car(Vehicle):
         self.itv = itv_val
 
     def get_full_car(self):
-        return "|| Kms: {} || ITV: {}".format(self.kms_realizados, self.itv)
+        return "Kms: {}; ITV: {};".format(self.kms_realizados, self.itv)
