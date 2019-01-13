@@ -12,3 +12,17 @@ class Car(Vehicle):
 
     def get_full_car(self):
         return "Kms: {}; ITV: {};".format(self.kms_realizados, self.itv)
+
+    def get_atributos(self, indice):
+        if indice == 0:
+            return self.marca
+        elif indice == 1:
+            return self.modelo
+        elif indice == 2:
+            return self.tipo_vehiculo
+        elif indice == 3:
+            return self.kms_realizados
+        elif indice == 4:
+            return self.itv
+        else:
+            return None
