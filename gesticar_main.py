@@ -27,6 +27,15 @@ def es_opcion(opc):
         return False
 
 
+def es_si_o_es_no(opc):
+    if opc=='s' or opc=='S':
+        return True
+    elif opc=='n' or opc=='N':
+        return False
+    else:
+        return None
+
+
 def es_numero(num):
     lo_es = None
     try:
@@ -127,7 +136,13 @@ def alta_nuevo_coche(cars):
     n_marca = raw_input("Introduzca la marca del vehiculo: ")
     n_modelo = raw_input("Introduzca el modelo del vehiculo: ")
     n_tipo = raw_input("Introduzca el tipo de vehiculo ('Turismo/Furgoneta/Motocicleta'): ")
-    n_kms = 0
+    es_nuevo = raw_input("¿El vehiculo está adquirido como nuevo? ('S'/'N'): ")[0]
+    es_nuevo.upper()
+    if es_si_o_es_no(es_nuevo):
+        n_kms = 0
+    else:
+        n_kms = raw_input("Introduzca los kilometros del vehiculo: ")
+
     todo_correcto = False
     while not todo_correcto:
         n_itv = raw_input("Introduzca el año de compra del vehiculo: ")
