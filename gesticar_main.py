@@ -63,8 +63,10 @@ def dame_atributos(indice):
     elif indice == 1:
         return "Modelo"
     elif indice == 2:
-        return "Kms"
+        return "Tipo vehiculo"
     elif indice == 3:
+        return "Kms"
+    elif indice == 4:
         return "ITV"
     else:
         return None
@@ -124,6 +126,7 @@ def alta_nuevo_coche(cars):
     print "Añadir un vehiculo: "
     n_marca = raw_input("Introduzca la marca del vehiculo: ")
     n_modelo = raw_input("Introduzca el modelo del vehiculo: ")
+    n_tipo = raw_input("Introduzca el tipo de vehiculo ('Turismo/Furgoneta/Motocicleta'): ")
     n_kms = 0
     todo_correcto = False
     while not todo_correcto:
@@ -134,16 +137,16 @@ def alta_nuevo_coche(cars):
         else:
             print "El año no es correcto."
 
-    nuevo_vehiculo = Car(n_kms, itv, n_marca, n_modelo)
+    nuevo_vehiculo = Car(n_kms, itv, n_marca, n_modelo, n_tipo)
 
     cars.append(nuevo_vehiculo)
     print "Añadido nuevo vehiculo."
 
 
 def main():
-    car2 = Car(53232, 2019, "Seat", "Alhambra")
-    car3 = Car(215000, 2019, "VW", "Golf IV")
-    car4 = Car(0, 2023, "BMW", "Serie 2 Gran Tourer")
+    car2 = Car(53232, 2019, "Seat", "Alhambra", "Turismo")
+    car3 = Car(215000, 2019, "VW", "Golf IV", "Turismo")
+    car4 = Car(0, 2023, "BMW", "Serie 2 Gran Tourer", "Turismo")
     cochazos = [car2, car3, car4]
 
     opcion = False
